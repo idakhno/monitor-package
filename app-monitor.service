@@ -1,0 +1,9 @@
+[Unit]
+Description=Минимальный монитор веб-приложения
+# Таймер будет вызывать этот сервис для проверки состояния приложения.
+
+[Service]
+ExecStart=/usr/bin/bash /opt/monitor/monitor.sh
+# Включаем перезапуск на случай ошибок самого скрипта.
+Restart=always
+RestartSec=10
